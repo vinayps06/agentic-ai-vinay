@@ -109,6 +109,7 @@ const Signup = (props:any) => {
 
     const [economy, setEconomy] = useState(false);
     const onToggleEconomy = () => setEconomy(prevCount => !prevCount);
+    
     const [business, setBusiness] = useState(false);
     const onToggleBusiness = () => setBusiness(prevCount => !prevCount);
 
@@ -261,8 +262,9 @@ const Signup = (props:any) => {
                     <WrapperRadioGroup options={[{name:"Air Asia", id:"AIR_ASIA"},
                         {name:"Lufthansa", id:"LUFTHANSA"},
                         {name:"Emirates", id:"EMIRATES"},
-                        {name:"Indigo", id:"INDIGO"},
-                        {name:"Air India", id:"AIR_INDIA"},
+                        //{name:"Indigo", id:"INDIGO"},
+                        {name:"SAS", id:"SAS"},
+                        //{name:"Air India", id:"AIR_INDIA"},
                         //{name:"Air India Express", id:"AIR_INDIA_EXPRESS"},
                     ]} value={preferredAirline} onValueChange={setPreferredAirline}/>
                 </div>
