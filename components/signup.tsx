@@ -128,8 +128,8 @@ const Signup = (props:any) => {
     const [vegan, setVegan] = useState(false);
     const onToggleVegan = () => setVegan(prevCount => !prevCount);
 
-    //const [eggean, setEggean] = useState(false);
-    //const onToggleEggean = () => setEggean(prevCount => !prevCount);
+    const [eggean, setEggean] = useState(false);
+    const onToggleEggean = () => setEggean(prevCount => !prevCount);
 
 
     const signUpData:SignUp = new SignUp();
@@ -148,7 +148,7 @@ const Signup = (props:any) => {
     signUpData.veg = veg;
     signUpData.nonVeg = nonVeg;
     signUpData.vegan = vegan;
-    //signUpData.eggean = eggean;
+    signUpData.eggean = eggean;
     signUpData.profilePic = profilePicture;
 
     return (
@@ -260,9 +260,9 @@ const Signup = (props:any) => {
                 <div className="space-y-3.5 w-2/5 pl-10">
                     <FieldName label="Preferred Airlines"/>
                     <WrapperRadioGroup options={[{name:"Air Asia", id:"AIR_ASIA"},
-                        //{name:"Lufthansa", id:"LUFTHANSA"},
+                        {name:"Lufthansa", id:"LUFTHANSA"},
                         {name:"Etihad", id:"Etihad"},
-                        {name:"Indigo", id:"INDIGO"},
+                        //{name:"Indigo", id:"INDIGO"},
                         {name:"SAS", id:"SAS"},
                         {name:"Air India", id:"AIR_INDIA"},
                         //{name:"Air India Express", id:"AIR_INDIA_EXPRESS"},
@@ -293,6 +293,11 @@ const Signup = (props:any) => {
                         <WrapperCheckbox id={3} label={"Vegan"}
                                          checked={vegan}
                                          onChange={()=>{onToggleVegan()}}
+                                         className="text-secondary text-sm pl-2"
+                        />
+                        <WrapperCheckbox id={4} label={"Eggean"}
+                                         checked={eggean}
+                                         onChange={()=>{onToggleEggean()}}
                                          className="text-secondary text-sm pl-2"
                         />
                     </div>
