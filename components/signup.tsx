@@ -49,7 +49,7 @@ const Signup = (props:any) => {
     let [password, setPassword] = useState("");
     let [confirmPassword, setConfirmPassword] = useState("");
     let [profilePicture, setProfilePicture] = useState("");
-    let [preferredAirline, setPreferredAirline] = useState("AIR_ASIA");
+    let [preferredAirline, setPreferredAirline] = useState("AIR_INDIA");
     let [preferredFood, setPreferredFood] = useState([1]);
     let [preferredClasses, setPreferredClasses] = useState([1]);
     let [travelFrequency, setTravelFrequency] = useState("Only Vacation")
@@ -259,12 +259,12 @@ const Signup = (props:any) => {
                 </div>
                 <div className="space-y-3.5 w-2/5 pl-10">
                     <FieldName label="Preferred Airlines"/>
-                    <WrapperRadioGroup options={[{name:"Air Asia", id:"AIR_ASIA"},
+                    <WrapperRadioGroup options={[{name:"Air India", id:"AIR_INDIA"},
                         {name:"Lufthansa", id:"LUFTHANSA"},
                         {name:"Etihad", id:"Etihad"},
                         //{name:"Indigo", id:"INDIGO"},
                         {name:"SAS", id:"SAS"},
-                        {name:"Air India", id:"AIR_INDIA"},
+                        //{name:"Air India", id:"AIR_INDIA"},
                         //{name:"Air India Express", id:"AIR_INDIA_EXPRESS"},
                     ]} value={preferredAirline} onValueChange={setPreferredAirline}/>
                 </div>
