@@ -128,8 +128,8 @@ const Signup = (props:any) => {
     const [vegan, setVegan] = useState(false);
     const onToggleVegan = () => setVegan(prevCount => !prevCount);
 
-    const [chicken, setChicken] = useState(false);
-    const onToggleChicken = () => setChicken(prevCount => !prevCount);
+    const [chicken, setVegetarian] = useState(false);
+    const onToggleVegetarian = () => setVegetarian(prevCount => !prevCount);
 
 
     const signUpData:SignUp = new SignUp();
@@ -148,7 +148,7 @@ const Signup = (props:any) => {
     signUpData.veg = veg;
     signUpData.nonVeg = nonVeg;
     signUpData.vegan = vegan;
-    signUpData.chicken = chicken;
+    //signUpData.vegetarian = vegetarian;
     signUpData.profilePic = profilePicture;
 
     return (
@@ -293,11 +293,6 @@ const Signup = (props:any) => {
                         <WrapperCheckbox id={3} label={"Vegan"}
                                          checked={vegan}
                                          onChange={()=>{onToggleVegan()}}
-                                         className="text-secondary text-sm pl-2"
-                        />
-                        <WrapperCheckbox id={4} label={"Chicken"}
-                                         checked={chicken}
-                                         onChange={()=>{onToggleChicken()}}
                                          className="text-secondary text-sm pl-2"
                         />
                     </div>

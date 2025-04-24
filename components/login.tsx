@@ -115,7 +115,7 @@ const Login = (props:any) => {
                     }
                     {myLoginData.value == myLoginData.options[0].id ?
                         <div>
-                            <input placeholder={"Enter your email address"} type={"email"} className={(myLoginData.invalidEmail?"warning-border mb-1 ":"mb-8 ")+"pl-2 text-xs w-full mt-2"}
+                            <input placeholder={"Enter your email"} type={"email"} className={(myLoginData.invalidEmail?"warning-border mb-1 ":"mb-8 ")+"pl-2 text-xs w-full mt-2"}
                                    value={myLoginData.email}
                                    onKeyUp={handleKeyPress}
                                    autoFocus={true}
@@ -133,7 +133,7 @@ const Login = (props:any) => {
                                     inputClassName="form-control"
                                 />
                             </div>
-                            <input placeholder={"Enter your mobile number"} type={"tel"} className={(myLoginData.invalidMobile?"warning-border mb-1 ":"mb-8 ")+"pl-14 text-xs w-full mt-2"}
+                            <input placeholder={"Enter your phone number"} type={"tel"} className={(myLoginData.invalidMobile?"warning-border mb-1 ":"mb-8 ")+"pl-14 text-xs w-full mt-2"}
                                    value={myLoginData.mobile}
                                    onChange={(e:any)=> myLoginData.invalidMobile? validateMobileNumber(e):setLoginData({...myLoginData,mobile: e.currentTarget.value})}
                                    required minLength={10}
