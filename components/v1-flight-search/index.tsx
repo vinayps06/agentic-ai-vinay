@@ -301,7 +301,7 @@ const V1FlightSearch = (props: FlightSearchProps) => {
               </div>
               {index === 0 ? (
                 <HeaderLabel
-                  content={'Passengers & Class'}
+                  content={'Passengers & Travel Class'}
                   className={'w-1/2'}
                 />
               ) : null}
