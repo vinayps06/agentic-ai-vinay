@@ -128,8 +128,8 @@ const Signup = (props:any) => {
     const [vegan, setVegan] = useState(false);
     const onToggleVegan = () => setVegan(prevCount => !prevCount);
 
-    const [eggean, setEggean] = useState(false);
-    const onToggleEggean = () => setEggean(prevCount => !prevCount);
+    const [chicken, setChicken] = useState(false);
+    const onToggleChicken = () => setChicken(prevCount => !prevCount);
 
 
     const signUpData:SignUp = new SignUp();
@@ -148,7 +148,7 @@ const Signup = (props:any) => {
     signUpData.veg = veg;
     signUpData.nonVeg = nonVeg;
     signUpData.vegan = vegan;
-    signUpData.eggean = eggean;
+    signUpData.chicken = chicken;
     signUpData.profilePic = profilePicture;
 
     return (
@@ -262,7 +262,7 @@ const Signup = (props:any) => {
                     <WrapperRadioGroup options={[{name:"Air India", id:"AIR_INDIA"},
                         {name:"Lufthansa", id:"LUFTHANSA"},
                         {name:"Etihad", id:"Etihad"},
-                        //{name:"Indigo", id:"INDIGO"},
+                        {name:"Indigo", id:"INDIGO"},
                         {name:"SAS", id:"SAS"},
                         //{name:"Air India", id:"AIR_INDIA"},
                         //{name:"Air India Express", id:"AIR_INDIA_EXPRESS"},
@@ -295,9 +295,9 @@ const Signup = (props:any) => {
                                          onChange={()=>{onToggleVegan()}}
                                          className="text-secondary text-sm pl-2"
                         />
-                        <WrapperCheckbox id={4} label={"Eggean"}
-                                         checked={eggean}
-                                         onChange={()=>{onToggleEggean()}}
+                        <WrapperCheckbox id={4} label={"Chicken"}
+                                         checked={chicken}
+                                         onChange={()=>{onToggleChicken()}}
                                          className="text-secondary text-sm pl-2"
                         />
                     </div>
